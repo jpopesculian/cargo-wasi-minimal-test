@@ -1,0 +1,17 @@
+[package]
+name = "runner"
+version = "0.1.0"
+authors = ["Julian Popescu <jpopesculian@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+anyhow = "1.0"
+
+[dependencies.wasmtime]
+git = "https://github.com/bytecodealliance/wasmtime.git"
+
+[dependencies.wasmtime-wasi]
+git = "https://github.com/bytecodealliance/wasmtime.git"
+
+[dependencies.wasmtime-interface-types]
+git = "https://github.com/bytecodealliance/wasmtime.git"
