@@ -863,6 +863,7 @@ name = "runner"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "wasmprinter",
  "wasmtime",
  "wasmtime-interface-types",
  "wasmtime-wasi",
@@ -1252,6 +1253,21 @@ name = "wasmparser"
 version = "0.47.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1add8db5a53a2f64f13418b241982c4ab533d7a9e1e8a5dcadccce633d8d393b"
+
+[[package]]
+name = "wasmparser"
+version = "0.49.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6d78cfefa3d7defb961ef866aef7c7a343df244b41b69bd9f495761c984f84fb"
+
+[[package]]
+name = "wasmprinter"
+version = "0.2.1"
+source = "git+https://github.com/bytecodealliance/wasmprinter.git#1926dbf3b8fa4a922edd0c3a2c9706c436b57d12"
+dependencies = [
+ "anyhow",
+ "wasmparser 0.49.0",
+]
 
 [[package]]
 name = "wasmtime"

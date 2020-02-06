@@ -19,6 +19,8 @@ impl WasmLib {
     }
 
     pub fn load_bytes(bytes: impl AsRef<[u8]>) -> Result<Self> {
+        println!("{}", wasmprinter::print_bytes(bytes.as_ref())?);
+
         let engine = Engine::new(
             Config::new()
                 .wasm_multi_value(true)
